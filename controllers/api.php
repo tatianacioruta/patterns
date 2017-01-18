@@ -19,7 +19,8 @@ class Api extends Controller
             } else {
                 $data['API_key'] = 'No such API';
             }
-            print_r(json_encode($data));
+            $factory = new JsonFactory();
+            print_r($factory->createText($data));
         } else {
             echo 'Wrong API request';
         }
