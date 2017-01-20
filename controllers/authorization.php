@@ -8,6 +8,8 @@ class Authorization extends Controller
      * Log in action
      */
     public function log_in(){
+        $cc = new CommandChain();
+        $cc->addCommand( new MailCommand() );
         if( !empty( $_POST["login"] ) && !empty( $_POST["password"] ) )
         {
             $user_model = new User_model();
@@ -21,6 +23,7 @@ class Authorization extends Controller
                 if($user_exist['user_group'] = 'admin'){
                     header("Location: http://tanysforum.co.nf/home/admin");
                 }else{
+                    $cc->runCommand( 'mail', 'admin' );
                     header("Location: http://tanysforum.co.nf");
                 }
             }else
@@ -37,6 +40,7 @@ class Authorization extends Controller
                 // set the user as connected and redirect him to a home page or something
                 $_SESSION["user_connected"] = true;
                 $_SESSION["user_data"] = $user_exist;
+                $cc->runCommand( 'mail', 'social' );
                 echo json_encode(array('status'=>'success'));
             }else{
                 $data['name'] = $_POST['name'];

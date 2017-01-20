@@ -3,7 +3,7 @@ class Paypal extends Controller
 {
 
     function index(){
-        $cart = new shoppingCart(30);
+        $cart = new ShoppingCart(30);
         $cart->payAmount();
     }
     function success()

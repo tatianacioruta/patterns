@@ -1,9 +1,10 @@
 <?php
 
 /**
- * Class payByPayPal
+ * Strategy Pattern
+ * Class PayByPayPal
  */
-class payByPayPal implements payStrategy
+class PayByPayPal implements PayStrategy
 {
     /**
      * Pay with paypal

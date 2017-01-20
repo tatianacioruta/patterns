@@ -1,6 +1,10 @@
 <?php
 
-class payByCC implements payStrategy
+/**
+ * Strategy Pattern
+ * Class PayByCC
+ */
+class PayByCC implements PayStrategy
 {
 
     private $ccNum = '';

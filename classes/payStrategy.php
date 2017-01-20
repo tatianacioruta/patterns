@@ -1,6 +1,10 @@
 <?
 
-interface payStrategy
+/**
+ * Strategy Pattern
+ * Interface PayStrategy
+ */
+interface PayStrategy
 {
     /**
      * Function pay

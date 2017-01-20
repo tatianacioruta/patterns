@@ -1,10 +1,8 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: Tati
- * Date: 18.01.2017
- * Time: 21:22
+ * Abstract Factory Pattern
+ * Class HtmlText
  */
 class HtmlText extends Text
 {

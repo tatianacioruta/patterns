@@ -1,6 +1,10 @@
 <?php
 
-class shoppingCart
+/**
+ * Strategy Pattern
+ * Class ShoppingCart
+ */
+class ShoppingCart
 {
 
     public $amount = 0;
